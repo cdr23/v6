@@ -20,7 +20,7 @@ commonname=none
 email=andyyuda51@gmail.com
 
 # simple password minimal
-curl -sS https://raw.githubusercontent.com/Bringas-tunnel/v6/main/plugin/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
+curl -sS https://raw.githubusercontent.com/cdr23/v6/main/plugin/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
 chmod +x /usr/bin//etc/pam.d/common-password
 
 # go to root
@@ -129,14 +129,14 @@ cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 # nginx.conf
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/plugin/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/cdr23/v6/main/plugin/nginx.conf"
 mkdir -p /home/vps/public_html
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
 # newudgpw
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/plugin/newudpgw"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/cdr23/v6/main/plugin/newudpgw"
 chmod +x /usr/bin//usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -246,7 +246,7 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 # banner /etc/issue.net
 sleep 1
 echo -e "[ ${green}INFO$NC ] Settings banner"
-wget -q -O /etc/issue.net "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/issue.net"
+wget -q -O /etc/issue.net "https://raw.githubusercontent.com/cdr23/v6/main/issue.net"
 chmod +x /usr/bin//etc/issue.net
 echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
@@ -254,7 +254,7 @@ sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dr
 #install bbr dan optimasi kernel
 # wget https://raw.githubusercontent.com/artanodrop/v4/main/ssh/bbr.sh && chmod +x /usr/bin/bbr.sh && ./bbr.sh
 ######## install bbr ########
-wget https://raw.githubusercontent.com/Bringas-tunnel/v6/main/system/bbr.sh && chmod +x /usr/bin/bbr.sh && ./bbr.sh
+wget https://raw.githubusercontent.com/cdr23/v6/main/system/bbr.sh && chmod +x /usr/bin/bbr.sh && ./bbr.sh
 
 # blockir torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
@@ -276,71 +276,71 @@ netfilter-persistent reload
 # download script
 cd /usr/bin
 # menu
-wget -O menu "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/menu/menu.sh"
-wget -O menu-trial "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/menu/menu-trial.sh"
-wget -O menu-vmess "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/menu/menu-vmess.sh"
-wget -O menu-vless "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/menu/menu-vless.sh"
-wget -O menu-trgo "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/menu/menu-trgo.sh"
-wget -O menu-trojan "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/menu/menu-trojan.sh"
-wget -O menu-ssh "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/menu/menu-ssh.sh"
-wget -O menu-manager "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/menu/menu-manager.sh"
-wget -O menu-set "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/menu/menu-set.sh"
-wget -O menu-domain "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/menu/menu-domain.sh"
-wget -O menu-webmin "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/menu/menu-webmin.sh"
+wget -O menu "https://raw.githubusercontent.com/cdr23/v6/main/menu/menu.sh"
+wget -O menu-trial "https://raw.githubusercontent.com/cdr23/v6/main/menu/menu-trial.sh"
+wget -O menu-vmess "https://raw.githubusercontent.com/cdr23/v6/main/menu/menu-vmess.sh"
+wget -O menu-vless "https://raw.githubusercontent.com/cdr23/v6/main/menu/menu-vless.sh"
+wget -O menu-trgo "https://raw.githubusercontent.com/cdr23/v6/main/menu/menu-trgo.sh"
+wget -O menu-trojan "https://raw.githubusercontent.com/cdr23/v6/main/menu/menu-trojan.sh"
+wget -O menu-ssh "https://raw.githubusercontent.com/cdr23/v6/main/menu/menu-ssh.sh"
+wget -O menu-manager "https://raw.githubusercontent.com/cdr23/v6/main/menu/menu-manager.sh"
+wget -O menu-set "https://raw.githubusercontent.com/cdr23/v6/main/menu/menu-set.sh"
+wget -O menu-domain "https://raw.githubusercontent.com/cdr23/v6/main/menu/menu-domain.sh"
+wget -O menu-webmin "https://raw.githubusercontent.com/cdr23/v6/main/menu/menu-webmin.sh"
 # theme
-wget -O menu1 "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/theme/menu1.sh"
-wget -O menu2 "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/theme/menu2.sh"
-wget -O menu3 "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/theme/menu3.sh"
+wget -O menu1 "https://raw.githubusercontent.com/cdr23/v6/main/theme/menu1.sh"
+wget -O menu2 "https://raw.githubusercontent.com/cdr23/v6/main/theme/menu2.sh"
+wget -O menu3 "https://raw.githubusercontent.com/cdr23/v6/main/theme/menu3.sh"
 # menu ssh ovpn
-wget -O usernew "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/ssh/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/ssh/trial.sh"
-wget -O renew "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/ssh/renew.sh"
-wget -O hapus "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/ssh/hapus.sh"
-wget -O cek "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/ssh/cek.sh"
-wget -O member "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/ssh/member.sh"
-wget -O delete "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/ssh/delete.sh"
-wget -O autokill "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/ssh/autokill.sh"
-wget -O ceklim "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/ssh/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/ssh/tendang.sh"
-wget -O xp "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/ssh/xp.sh"
-wget -q -O /usr/bin/lock "https://raw.githubusercontent.com/Bringas-tunnel/v6/ssh/user-lock.sh"
-wget -q -O /usr/bin/unlock "https://raw.githubusercontent.com/Bringas-tunnel/v6/ssh/user-unlock.sh"
+wget -O usernew "https://raw.githubusercontent.com/cdr23/v6/main/ssh/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/cdr23/v6/main/ssh/trial.sh"
+wget -O renew "https://raw.githubusercontent.com/cdr23/v6/main/ssh/renew.sh"
+wget -O hapus "https://raw.githubusercontent.com/cdr23/v6/main/ssh/hapus.sh"
+wget -O cek "https://raw.githubusercontent.com/cdr23/v6/main/ssh/cek.sh"
+wget -O member "https://raw.githubusercontent.com/cdr23/v6/main/ssh/member.sh"
+wget -O delete "https://raw.githubusercontent.com/cdr23/v6/main/ssh/delete.sh"
+wget -O autokill "https://raw.githubusercontent.com/cdr23/v6/main/ssh/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/cdr23/v6/main/ssh/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/cdr23/v6/main/ssh/tendang.sh"
+wget -O xp "https://raw.githubusercontent.com/cdr23/v6/main/ssh/xp.sh"
+wget -q -O /usr/bin/lock "https://raw.githubusercontent.com/cdr23/v6/ssh/user-lock.sh"
+wget -q -O /usr/bin/unlock "https://raw.githubusercontent.com/cdr23/v6/ssh/user-unlock.sh"
 # sodosok
-wget -O adds "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/sodosok/adds.sh"
-wget -O cekss "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/sodosok/cekss.sh"
-wget -O renewss "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/sodosok/renewss.sh"
-wget -O delss "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/sodosok/delss.sh"
-wget -O addssr "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/sodosok/addssr.sh"
-wget -O renewssr"https://raw.githubusercontent.com/Bringas-tunnel/v6/main/sodosok/renewssr.sh"
-wget -O ssrmu "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/sodosok/ssrmu.sh"
-wget -O ssr "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/sodosok/ssr.sh"
+wget -O adds "https://raw.githubusercontent.com/cdr23/v6/main/sodosok/adds.sh"
+wget -O cekss "https://raw.githubusercontent.com/cdr23/v6/main/sodosok/cekss.sh"
+wget -O renewss "https://raw.githubusercontent.com/cdr23/v6/main/sodosok/renewss.sh"
+wget -O delss "https://raw.githubusercontent.com/cdr23/v6/main/sodosok/delss.sh"
+wget -O addssr "https://raw.githubusercontent.com/cdr23/v6/main/sodosok/addssr.sh"
+wget -O renewssr"https://raw.githubusercontent.com/cdr23/v6/main/sodosok/renewssr.sh"
+wget -O ssrmu "https://raw.githubusercontent.com/cdr23/v6/main/sodosok/ssrmu.sh"
+wget -O ssr "https://raw.githubusercontent.com/cdr23/v6/main/sodosok/ssr.sh"
 # xray
-wget -O certv2ray "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/xray/certv2ray.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/cdr23/v6/main/xray/certv2ray.sh"
 # change port
-wget -O port-ssl "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/prot/port-ssl.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/prot/port-ovpn.sh"
-wget -O port-change "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/prot/port-change.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/cdr23/v6/main/prot/port-ssl.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/cdr23/v6/main/prot/port-ovpn.sh"
+wget -O port-change "https://raw.githubusercontent.com/cdr23/v6/main/prot/port-change.sh"
 # system
-wget -O acs-set "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/system/acs-set.sh"
-wget -O speedtest "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/system/speedtest_cli.py"
-wget -O auto-reboot "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/system/auto-reboot.sh"
-wget -O restart "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/system/restart.sh"
-wget -O bw "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/system/bw.sh"
-wget -O running "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/system/running.sh"
-wget -O clearcache "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/system/clearcache.sh"
-wget -O about "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/system/about.sh"
-wget -O jam "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/system/jam.sh"
-wget -O add-host "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/system/add-host.sh"
-wget -O status "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/system/status.sh"
-wget -O slow "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/system/slow.sh"
-wget -q -O /usr/bin/update "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/system/update.sh"
+wget -O acs-set "https://raw.githubusercontent.com/cdr23/v6/main/system/acs-set.sh"
+wget -O speedtest "https://raw.githubusercontent.com/cdr23/v6/main/system/speedtest_cli.py"
+wget -O auto-reboot "https://raw.githubusercontent.com/cdr23/v6/main/system/auto-reboot.sh"
+wget -O restart "https://raw.githubusercontent.com/cdr23/v6/main/system/restart.sh"
+wget -O bw "https://raw.githubusercontent.com/cdr23/v6/main/system/bw.sh"
+wget -O running "https://raw.githubusercontent.com/cdr23/v6/main/system/running.sh"
+wget -O clearcache "https://raw.githubusercontent.com/cdr23/v6/main/system/clearcache.sh"
+wget -O about "https://raw.githubusercontent.com/cdr23/v6/main/system/about.sh"
+wget -O jam "https://raw.githubusercontent.com/cdr23/v6/main/system/jam.sh"
+wget -O add-host "https://raw.githubusercontent.com/cdr23/v6/main/system/add-host.sh"
+wget -O status "https://raw.githubusercontent.com/cdr23/v6/main/system/status.sh"
+wget -O slow "https://raw.githubusercontent.com/cdr23/v6/main/system/slow.sh"
+wget -q -O /usr/bin/update "https://raw.githubusercontent.com/cdr23/v6/main/system/update.sh"
 # backup
-wget -O sshws "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/ssh/sshws.sh"
-wget -O menu-backup "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/menu/menu-backup.sh"
-wget -O backup "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/backup/backup.sh"
-wget -O restore "https://raw.githubusercontent.com/Bringas-tunnel/v6/main/backup/restore.sh"
+wget -O sshws "https://raw.githubusercontent.com/cdr23/v6/main/ssh/sshws.sh"
+wget -O menu-backup "https://raw.githubusercontent.com/cdr23/v6/main/menu/menu-backup.sh"
+wget -O backup "https://raw.githubusercontent.com/cdr23/v6/main/backup/backup.sh"
+wget -O restore "https://raw.githubusercontent.com/cdr23/v6/main/backup/restore.sh"
 # xolpanel
-wget -q -O /usr/bin/xolpanel "https://raw.githubusercontent.com/Bringas-tunnel/xolpanel/main/xolpanel.sh"
+wget -q -O /usr/bin/xolpanel "https://raw.githubusercontent.com/cdr23/xolpanel/main/xolpanel.sh"
 # chmod menu
 chmod +x /usr/bin/menu
 chmod +x /usr/bin/menu-ssh
