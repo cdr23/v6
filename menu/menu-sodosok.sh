@@ -6,7 +6,7 @@ NC='\033[0m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/Bringas-tunnel/permission/main/ipmini | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/cdr23/permission/main/ipmini | grep $MYIP )
 if [ $MYIP = $MYIP ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
