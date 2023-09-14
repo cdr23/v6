@@ -54,7 +54,7 @@ case $otw in
 8) clear ; jam ;;
 9) clear ; xolpanel ;;
 10) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
-6969) clear ; wget https://raw.githubusercontent.com/Bringas-tunnel/v6/main/system/update.sh && chmod +x update.sh && ./update.sh && rm -f /root/update.sh ;;
+6969) clear ; wget https://raw.githubusercontent.com/cdr23/v6/main/system/update.sh && chmod +x update.sh && ./update.sh && rm -f /root/update.sh ;;
 0) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "salah Pencet kedak Asu" ; sleep 1 ; menu-manager ;;
