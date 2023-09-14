@@ -15,7 +15,7 @@ yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 # domain random
-CDN="https://raw.githubusercontent.com/Bringas-tunnel/v6/main/ssh"
+CDN="https://raw.githubusercontent.com/cdr23/v6/main/ssh"
 cd /root
 if [ "${EUID}" -ne 0 ]; then
 echo "You need to run this script as root"
@@ -133,7 +133,7 @@ echo -e "${green}└────────────────────
 sleep 3
 #wget -q https://raw.githubusercontent.com/Bringas-tunnel/v6/main/system/kontol.sh;chmod +x kontol.sh;./Kontol.sh
 #rm Kontol.sh
-wget https://raw.githubusercontent.com/Bringas-tunnel/v6/main/system/kontol.sh && chmod +x kontol.sh && ./kontol.sh
+wget https://raw.githubusercontent.com/cdr23/v6/main/system/kontol.sh && chmod +x kontol.sh && ./kontol.sh
 clear
 echo " "
 echo "${green}Anda akan di arahkan ke domain dalam 3 detik${NC}"
@@ -207,14 +207,14 @@ echo -e "$green      Install SSH / WS               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/Bringas-tunnel/v6/main/install/installed.sh && chmod +x installed.sh && ./installed.sh
+wget https://raw.githubusercontent.com/cdr23/v6/main/install/installed.sh && chmod +x installed.sh && ./installed.sh
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install BACKUP               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/Bringas-tunnel/v6/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/cdr23/v6/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
 clear
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -222,23 +222,23 @@ echo -e "$green          Install XRAY              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/Bringas-tunnel/v6/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-wget https://raw.githubusercontent.com/Bringas-tunnel/v6/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/cdr23/v6/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/cdr23/v6/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green          Install SLOWDNS              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/Bringas-tunnel/v6/main/system/slow.sh && chmod +x slow.sh && ./slow.sh
+wget https://raw.githubusercontent.com/cdr23/v6/main/system/slow.sh && chmod +x slow.sh && ./slow.sh
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green          Install SHADOWSOCKS              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/Bringas-tunnel/v6/main/sodosok/sodosok.sh && chmod +x sodosok.sh && ./sodosok.sh
-wget https://raw.githubusercontent.com/Bringas-tunnel/v6/main/sodosok/ssr.sh && chmod +x ssr.sh && ./ssr.sh
+wget https://raw.githubusercontent.com/cdr23/v6/main/sodosok/sodosok.sh && chmod +x sodosok.sh && ./sodosok.sh
+wget https://raw.githubusercontent.com/cdr23/v6/main/sodosok/ssr.sh && chmod +x ssr.sh && ./ssr.sh
 clear
 cat> /root/.profile << END
 if [ "$BASH" ]; then
@@ -261,7 +261,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/Bringas-tunnel/v6/main/version  )
+serverV=$( curl -sS https://raw.githubusercontent.com/cdr23/v6/main/version  )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
