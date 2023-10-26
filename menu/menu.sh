@@ -308,7 +308,7 @@ case $opt in
 2) clear ; menu-vmess ;;
 3) clear ; menu-vless ;;
 4) clear ; menu-trojan ;;
-5) clear ; bash menu-manager.sh ;;
+5) clear ; menu-manager.sh ;;
 6) clear ; menu-trial ;;
 7) clear ; menu-backup ;;
 8) clear ; add-host ;;
